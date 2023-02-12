@@ -11,7 +11,7 @@ const taskSchema = require("./model/Task");
 const Task = mongoose.model("Tasks", taskSchema);
 
 const mongoDBAccess =
-  "mongodb+srv://newuser:newuser123@task-class2.kudkztr.mongodb.net/?retryWrites=true&w=majority";
+  "mongodb+srv://adminuser:adminuser123@task-class2.kudkztr.mongodb.net/?retryWrites=true&w=majority";
 
 mongoose.set("strictQuery", false);
 mongoose
@@ -104,14 +104,14 @@ app.get("/task", (req, res) => {
 });
 
 // READ task by id
-app.get('/task/:id', (req, res) => {
+app.get("/task/:id", (req, res) => {
   Task.findById(req.params.id, (err, task) => {
     if (err) {
-      res.send(err)
+      res.send(err);
     }
-    res.send(task)
-  })
-})
+    res.send(task);
+  });
+});
 
 // UPDATE
 // app.patch("/task/:id", (req, res) => {
