@@ -1,0 +1,9 @@
+name: task-app-api
+type: web
+build.command: npm install
+start.command: npm start
+env:
+  NODE_ENV: production
+  PORT: 3000
+ports:
+  - 80
