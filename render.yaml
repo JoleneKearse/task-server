@@ -6,4 +6,4 @@ env:
   NODE_ENV: production
   PORT: 3000
 ports:
-  - 80
+  4000
